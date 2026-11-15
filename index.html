@@ -728,7 +728,7 @@ h2.tm-words{will-change:translate}
     <section id="about" style="padding-top:clamp(72px,9vw,120px)">
     <div class="wrap about-grid">
       <figure class="portrait reveal">
-        <img src="imgs/462A0983.JPG.jpeg" alt="Portrait of the photographer">
+        <img src="images/journey_imgs/02.jpg" alt="Portrait of the photographer">
         <span class="cap">ShivaRam Studios</span>
       </figure>
       <div class="about-copy reveal">
@@ -855,28 +855,67 @@ const pad = n => String(n).padStart(2, "0");
 // If no photo is tagged "All", the ALL chip shows every photo.
 // Entries with an empty src are skipped automatically.
 const RAW_PHOTOS = [
-  {src:"imgs/wedding/01.jpg",      cat:["All","Marriage"], title:"First look"},
-  {src:"imgs/wedding/02.jpg",      cat:"Marriage",         title:"First look"},
-  {src:"imgs/events/01.jpeg",      cat:["All","Events"],   title:"Stage lights"},
-  {src:"imgs/candid_imgs/01.jpg",  cat:["All","Portrait"], title:"Window light"},
-  {src:"imgs/events/02.jpeg",      cat:"Events",           title:"Wedding ceremony"},
-  {src:"imgs/birthday/01.jpeg",    cat:["All","Birthday"], title:"Birthday party"},
-  {src:"imgs/birthday/03.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/02.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/candid_imgs/02.jpg",  cat:["All","Portrait"], title:"Between frames"},
-  {src:"imgs/candid_imgs/04.jpeg", cat:"Portrait",         title:"Between frames"},
-  {src:"imgs/candid_imgs/05.jpeg", cat:"Portrait",         title:"Between frames"},
-  {src:"imgs/candid_imgs/03.jpg",  cat:"Portrait",         title:"Between frames"},
-  {src:"imgs/portraits/03.jpg",    cat:["All","Portrait"], title:"Golden hour"},
-  {src:"imgs/birthday/04.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/05.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/06.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/07.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/08.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/09.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/10.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/11.jpeg",    cat:"Birthday",         title:"Birthday party"},
-  {src:"imgs/birthday/12.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  //portrait_imgs
+  {src:"images/candid_imgs/01.jpg", cat:"Portrait",         title:"Between frames_01"},
+  {src:"images/candid_imgs/02.jpg", cat:"Portrait",         title:"Between frames_02"},
+  {src:"images/candid_imgs/03.jpg",  cat:"Portrait",         title:"Between frames_03"},
+  {src:"images/candid_imgs/04.jpeg",  cat:["All","Portrait"], title:"Golden hour_04"},
+  {src:"images/candid_imgs/05.jpeg",  cat:["All","Portrait"], title:"Window light_05"},
+  {src:"images/candid_imgs/06.jpeg",  cat:["All","Portrait"], title:"Between frames_06"},
+  {src:"images/candid_imgs/07.jpeg",  cat:["All","Portrait"], title:"Between frames_07"},
+  {src:"images/candid_imgs/08.jpeg",  cat:["All","Portrait"], title:"Between frames_08"},
+  //wedding_imgs
+  {src:"images/wedding/01.jpg",      cat:["All","Marriage"], title:"First look_01"},
+  {src:"images/wedding/2.jpeg",      cat:"Marriage",         title:"First look_02"},
+  {src:"images/wedding/3.jpeg",      cat:"Marriage",         title:"First look_03"},
+  {src:"images/wedding/4.jpeg",      cat:"Marriage",         title:"First look_04"},
+  {src:"images/wedding/5.jpeg",      cat:"Marriage",         title:"First look_05"},
+  {src:"images/wedding/6.jpeg",      cat:"Marriage",         title:"First look_06"},
+  {src:"images/wedding/7.jpeg",      cat:"Marriage",         title:"First look_07"},
+  {src:"images/wedding/8.jpeg",      cat:"Marriage",         title:"First look_08"},
+  {src:"images/wedding/9.jpeg",      cat:"Marriage",         title:"First look_09"},
+  {src:"images/wedding/10.jpeg",      cat:"Marriage",         title:"First look_10"},
+  {src:"images/wedding/11.jpeg",      cat:"Marriage",         title:"First look_11"},
+  {src:"images/wedding/12.jpeg",      cat:"Marriage",         title:"First look_12"},
+  {src:"images/wedding/13.jpeg",      cat:"Marriage",         title:"First look_13"},
+  {src:"images/wedding/14.jpeg",      cat:"Marriage",         title:"First look_14"},
+  {src:"images/wedding/15.jpeg",      cat:"Marriage",         title:"First look_15"},
+  {src:"images/wedding/16.jpeg",      cat:"Marriage",         title:"First look_16"},
+  {src:"images/wedding/17.jpg",      cat:"Marriage",         title:"First look_17"},
+  {src:"images/wedding/18.jpeg",      cat:"Marriage",         title:"First look_18"},
+  {src:"images/wedding/19.jpeg",      cat:"Marriage",         title:"First look_19"},
+  {src:"images/wedding/20.jpeg",      cat:"Marriage",         title:"First look_20"},
+  {src:"images/wedding/21.jpeg",      cat:"Marriage",         title:"First look_21"},
+  {src:"images/wedding/22.jpeg",      cat:"Marriage",         title:"First look_22"},
+  {src:"images/wedding/23.jpeg",      cat:"Marriage",         title:"First look_23"},
+  {src:"images/wedding/24.jpg",      cat:"Marriage",         title:"First look_24"},
+  {src:"images/wedding/25.jpg",      cat:"Marriage",         title:"First look_25"},
+  {src:"images/wedding/26.jpg",      cat:"Marriage",         title:"First look_26"},
+  {src:"images/wedding/27.jpg",      cat:"Marriage",         title:"First look_27"},
+  {src:"images/wedding/28.jpg",      cat:"Marriage",         title:"First look_28"},
+  {src:"images/wedding/29.jpg",      cat:"Marriage",         title:"First look_29"},
+  {src:"images/wedding/30.jpg",      cat:"Marriage",         title:"First look_30"},
+  {src:"images/wedding/31.jpg",      cat:"Marriage",         title:"First look_31`"},
+  {src:"images/wedding/32.jpg",      cat:"Marriage",         title:"First look_32"},
+  {src:"images/wedding/33.jpg",      cat:"Marriage",         title:"First look_33"},
+  //birthday_imgs
+  {src:"images/birthday/01.jpeg",    cat:["All","Birthday"], title:"Birthday party"},
+  {src:"images/birthday/02.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/04.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/05.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/06.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/07.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/08.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/09.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/10.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/11.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/03.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  {src:"images/birthday/12.jpeg",    cat:"Birthday",         title:"Birthday party"},
+  //events_imgs
+  {src:"images/events/01.jpeg",      cat:["All","Events"],   title:"Stage lights"},
+  {src:"images/events/02.jpeg",      cat:"Events",           title:"Wedding ceremony"},
+
+  //both_section
 ];
 const catsOf = p => (Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean);
 const PHOTOS = RAW_PHOTOS.filter(p => p.src).map((p, i) => ({

@@ -157,7 +157,14 @@ section{padding-block:clamp(80px,12vw,150px)}
 .rec .k svg{width:22px;height:22px;stroke:var(--amber);fill:none;stroke-width:1.4}
 .rec h3{font-size:28px}
 .rec p{color:var(--mute);font-size:14.5px}
-.rec small{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+/* client reviews */
+.review{gap:18px}
+.review .stars{color:#E0A100;font-size:15px;letter-spacing:.12em;text-transform:none}
+.review .quote{color:var(--paper);font-size:15.5px;line-height:1.65;font-style:italic;flex:1}
+.review .who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:16px;border-top:1px dashed var(--line)}
+.review .av{width:42px;height:42px;flex:none;border-radius:50%;background:var(--paper);color:#fff;display:grid;place-items:center;font-weight:600;font-size:17px}
+.review h3{font-size:18px;line-height:1.2}
+.review small{display:block;margin-top:3px}
 
 /* CLIENTS */
 .marq{overflow:hidden;border-block:1px solid var(--line);padding-block:26px;margin-top:clamp(50px,7vw,80px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -481,10 +488,10 @@ h2.tm-words{will-change:translate}
     <div class="wrap">
       <div class="head reveal">
         <div>
-          <span class="eyebrow">Recognition</span>
-          <h2>Awards Features</h2>
+                    <span class="eyebrow">Client reviews</span>
+          <h2>What our <em>clients</em> say</h2>
         </div>
-        <p class="lead">Moments where the work was noticed beyond the people we shot for.</p>
+        <p class="lead">Real words from the couples, families and brands we've had the joy of shooting for.</p>
       </div>
       <div class="rec-grid reveal" id="recGrid"></div>
       <div class="marq" aria-label="Clients we've worked with">
@@ -578,11 +585,17 @@ const STATS = [
 ];
 
 /* type: "award" | "feature" | "milestone" */
-const RECOGNITION = [
-  {type:"award",     year:"2023", title:"Best Wedding Story", text:"Recognised at a regional wedding photography showcase for a monsoon wedding film.", by:"Replace with the award name"},
-  {type:"feature",   year:"2024", title:"Featured in local press", text:"A photo essay on Warangal's heritage at golden hour, printed and shared online.", by:"Replace with publication"},
-  {type:"milestone", year:"2024", title:"10K on Instagram", text:"The community around @shivaram_photography crossed ten thousand followers.", by:"Instagram"},
-  {type:"award",     year:"2025", title:"Top-rated studio", text:"5-star average across client reviews, with most new bookings coming from referrals.", by:"Client reviews"}
+/* CLIENT REVIEWS — replace these with your real reviews
+   stars: 1 to 5 · shoot: type of shoot · place: city */
+const REVIEWS = [
+  {name:"Client name", shoot:"Wedding", year:"2025", place:"Warangal", stars:5,
+   text:"The team captured every moment of our wedding beautifully. The photos feel natural and full of emotion — we relive the day every time we look at them."},
+  {name:"Client name", shoot:"Birthday", year:"2025", place:"Hanamkonda", stars:5,
+   text:"Our baby's first birthday photos turned out amazing. They were patient with the kids and delivered the album quickly."},
+  {name:"Client name", shoot:"Pre-wedding", year:"2024", place:"Hyderabad", stars:5,
+   text:"Very professional and creative. They suggested great locations and made us comfortable in front of the camera."},
+  {name:"Client name", shoot:"Event", year:"2024", place:"Warangal", stars:5,
+   text:"Drone shots, cinematic video and LED screens all handled perfectly. Highly recommended for any big event."}
 ];
 
 const CLIENTS = ["Client one","Local café","Wedding studio","Brand name","Restaurant","Fashion label","Event company","Real estate"];
@@ -683,21 +696,22 @@ addEventListener("resize", onScroll);
 onScroll();
 
 /* recognition */
-const ICONS = {
-  award:`<svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>`,
-  feature:`<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>`,
-  milestone:`<svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>`
-};
-$("#recGrid").innerHTML = RECOGNITION.map(r => `
-  <article class="rec">
-    <div class="k"><span>${r.type} · ${r.year}</span>${ICONS[r.type] || ICONS.milestone}</div>
-    <h3>${r.title}</h3>
-    <p>${r.text}</p>
-    <small>${r.by}</small>
-  </article>`).join("");
+/* client reviews */
+/* client reviews */
+$("#recGrid").innerHTML = REVIEWS.map(r => {
+  const s = Math.max(1, Math.min(5, r.stars || 5));
+  return `
+  <article class="rec review">
+    <div class="k"><span>${r.shoot} · ${r.year}</span><span class="stars" aria-label="${s} out of 5 stars">${"★".repeat(s)}${"☆".repeat(5 - s)}</span></div>
+    <p class="quote">“${r.text}”</p>
+    <div class="who">
+      <span class="av" aria-hidden="true">${r.name.trim().charAt(0).toUpperCase()}</span>
+      <div><h3>${r.name}</h3><small>${r.place}</small></div>
+    </div>
+  </article>`;
+}).join("");
 const clientRow = CLIENTS.map(c => `<span>${c}</span>`).join("");
 $("#marq").innerHTML = clientRow + clientRow;
-
 /* lightbox (only photos that loaded) */
 const lb = $("#lb"); let cur = 0, lastFocus = null;
 const shown = () => MILESTONES.map((m, i) => m._ok ? i : -1).filter(i => i > -1);

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The journey of Shivaram & Studio's: milestones, achievements and recognition from the first shoot to today.">
+<title>Journey · Shivaram &amp; Studio's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap">
+
+<style>
+:root{
+  color-scheme:light;
+  --ink:#EFEBDD;
+  --ink-2:#E7E2D2;
+  --ink-3:#DDD7C5;
+  --line:#CDC6B1;
+  --paper:#1C4A93;
+  --mute:#5E6E8C;
+  --amber:#1C4A93;
+  --amber-deep:#2A61B8;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:140px}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--amber);color:var(--ink)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+.grain{pointer-events:none;position:fixed;inset:0;z-index:90;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.mono{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
+h3{font-family:var(--body);font-weight:600;margin:0;text-wrap:balance;line-height:1.15;letter-spacing:-.01em}
+h1,h2{font-family:var(--display);font-weight:700;font-optical-sizing:auto;margin:0;text-wrap:balance;line-height:1.05}
+h2{font-size:clamp(34px,5.2vw,66px);letter-spacing:-.015em}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--amber)}
+p{margin:0}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(13,10,8,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:700;font-size:27px;letter-spacing:.01em}
+.brand b i{color:var(--amber)}
+.links{display:flex;gap:34px;align-items:center}
+.links a{font-weight:500;text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);opacity:.8;transition:opacity .2s,color .2s}
+.links a:hover,.links a[aria-current="page"]{opacity:1;color:var(--amber)}
+.links .book{opacity:1;border:1px solid var(--amber);color:var(--amber);padding:10px 18px}
+.links .book:hover{background:var(--amber);color:var(--ink)}
+.burger{display:none;background:none;border:0;color:var(--paper);width:44px;height:44px;cursor:pointer;padding:10px}
+.burger i{display:block;height:1.5px;background:currentColor;margin:6px 0;transition:transform .3s,opacity .3s}
+.nav.open .burger i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav.open .burger i:nth-child(2){opacity:0}
+.nav.open .burger i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+.btn{font-family:var(--body);display:inline-flex;align-items:center;gap:12px;background:var(--amber);color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:16px 26px;border:0;cursor:pointer;transition:background .25s,gap .25s}
+.btn:hover{background:var(--paper);gap:18px}
+.btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(241,232,218,.4)}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+section{padding-block:clamp(80px,12vw,150px)}
+
+/* HERO */
+.jhero{position:relative;min-height:100svh;display:grid;align-items:end;padding:calc(72px + 60px) 0 clamp(48px,8vh,90px);overflow:hidden;isolation:isolate}
+.jhero::before{content:"";position:absolute;left:50%;top:38%;width:min(1100px,140vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(227,162,91,.18) 0%,rgba(227,162,91,.05) 38%,transparent 66%);z-index:-1}
+.vf{position:absolute;inset:clamp(84px,11vh,110px) var(--gutter) clamp(24px,4vh,40px);pointer-events:none;z-index:-1}
+.vf i{position:absolute;width:26px;height:26px;border-color:rgba(241,232,218,.4);border-style:solid;border-width:0}
+.vf i:nth-child(1){top:0;left:0;border-top-width:1.5px;border-left-width:1.5px}
+.vf i:nth-child(2){top:0;right:0;border-top-width:1.5px;border-right-width:1.5px}
+.vf i:nth-child(3){bottom:0;left:0;border-bottom-width:1.5px;border-left-width:1.5px}
+.vf i:nth-child(4){bottom:0;right:0;border-bottom-width:1.5px;border-right-width:1.5px}
+.big-year{position:absolute;right:var(--gutter);top:clamp(110px,16vh,170px);font-family:var(--display);font-weight:700;font-size:clamp(120px,22vw,340px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(241,232,218,.12);letter-spacing:-.04em;z-index:-1;user-select:none}
+.jhero-in{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px}
+.jhero h1{font-weight:700;font-size:clamp(46px,7.8vw,118px);letter-spacing:-.02em;line-height:.92;margin-top:20px}
+.jhero h1 span{display:block;overflow:hidden}
+.jhero h1 span b{display:block;font-weight:700;animation:rise 1.1s cubic-bezier(.2,.7,.1,1) both}
+.jhero h1 span:nth-child(2) b{animation-delay:.12s}
+@keyframes rise{from{transform:translateY(100%)}to{transform:none}}
+.jhero-side{max-width:340px;display:grid;gap:22px;animation:fade 1s .4s both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.jhero-side p{color:rgba(241,232,218,.82);font-size:15px}
+.scroll-cue{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.scroll-cue::before{content:"";width:40px;height:1px;background:var(--amber)}
+
+/* STATS */
+.stats-band{border-block:1px solid var(--line);background:var(--ink-2);padding-block:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats div{padding:34px 0 30px;display:grid;gap:4px}
+.stats div + div{padding-left:28px;border-left:1px solid var(--line)}
+.stats b{font-family:var(--body);font-weight:600;font-size:clamp(40px,5vw,64px);line-height:1}
+.stats b sup{font-size:.45em;color:var(--amber);margin-left:2px}
+.stats span{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+
+/* YEAR BAR */
+.yearbar{position:sticky;top:72px;z-index:40;background:rgba(13,10,8,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.yearbar-in{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:12px}
+.yearbar-in::-webkit-scrollbar{display:none}
+.yr{flex:none;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;color:var(--mute);text-decoration:none;padding:8px 14px;border:1px solid transparent;transition:color .2s,border-color .2s,background .2s}
+.yr:hover{color:var(--paper);border-color:var(--line)}
+.yr.on{color:var(--ink);background:var(--amber);border-color:var(--amber)}
+.yearbar .prog{height:2px;background:var(--line)}
+.yearbar .prog i{display:block;height:100%;width:0;background:var(--amber);transition:width .15s linear}
+
+/* TIMELINE */
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(48px,7vw,90px)}
+.head .eyebrow{margin-bottom:18px;display:block}
+.head p.lead{max-width:420px;color:var(--mute)}
+.tl{position:relative;display:grid;gap:clamp(70px,10vw,140px)}
+.tl-rail{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line);transform:translateX(-50%)}
+.tl-rail i{position:absolute;left:0;top:0;width:100%;height:0;background:linear-gradient(var(--amber-deep),var(--amber));box-shadow:0 0 12px rgba(227,162,91,.5)}
+.ms{position:relative;display:grid;grid-template-columns:1fr 90px 1fr;align-items:center}
+.ms-dot{grid-column:2;grid-row:1;justify-self:center;width:15px;height:15px;border-radius:50%;background:var(--ink);border:1.5px solid var(--mute);position:relative;z-index:1;transition:border-color .5s,background .5s,box-shadow .5s}
+.ms.lit .ms-dot{border-color:var(--amber);background:var(--amber);box-shadow:0 0 0 6px rgba(227,162,91,.15)}
+.ms-copy{grid-column:1;grid-row:1;justify-self:end;text-align:right;max-width:470px;display:grid;gap:16px}
+.ms-media{grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:520px}
+.ms:nth-child(even) .ms-copy{grid-column:3;justify-self:start;text-align:left}
+.ms:nth-child(even) .ms-media{grid-column:1;justify-self:end}
+.ms-year{font-family:var(--display);font-weight:700;font-size:clamp(64px,8vw,112px);line-height:.85;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1px var(--amber)}
+.ms-meta{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.ms-meta b{color:var(--amber);font-weight:500}
+.ms h3{font-size:clamp(30px,3.2vw,44px)}
+.ms p{color:var(--mute);font-size:15.5px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.ms:not(:nth-child(even)) .tags{justify-content:flex-end}
+.tags span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:5px 10px;color:var(--paper)}
+.ms-stat{display:flex;align-items:baseline;gap:10px}
+.ms:not(:nth-child(even)) .ms-stat{justify-content:flex-end}
+.ms-stat b{font-family:var(--body);font-weight:600;font-size:36px;color:var(--paper);line-height:1}
+.ms-stat span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+.frame{position:relative;background:#EFE6D6;padding:10px 10px 46px;box-shadow:0 30px 60px -24px rgba(0,0,0,.9);transform:rotate(var(--r,-2deg));transition:transform .6s cubic-bezier(.2,.7,.1,1);cursor:zoom-in}
+.frame:hover{transform:rotate(0deg) scale(1.02)}
+.frame .pic{position:relative;aspect-ratio:var(--ar,4/3);overflow:hidden;background:linear-gradient(135deg,#3a2a1d,#16110d 60%,#2a1d12)}
+.frame .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.frame .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--body);font-weight:600;font-size:clamp(40px,6vw,72px);color:rgba(241,232,218,.18)}
+.frame figcaption{position:absolute;left:14px;right:14px;bottom:12px;display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:#5a4636;text-transform:uppercase}
+.ms.now .ms-year{color:var(--amber);-webkit-text-stroke:0}
+.ms.now .ms-meta b::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#E0533B;margin-right:8px;vertical-align:1px;animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+
+/* RECOGNITION */
+.rec-sec{background:var(--ink-2);border-block:1px solid var(--line)}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.rec{background:var(--ink-2);padding:30px 28px;display:grid;gap:14px;align-content:start;transition:background .3s}
+.rec:hover{background:var(--ink-3)}
+.rec .k{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+.rec .k svg{width:22px;height:22px;stroke:var(--amber);fill:none;stroke-width:1.4}
+.rec h3{font-size:28px}
+.rec p{color:var(--mute);font-size:14.5px}
+.rec small{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+
+/* CLIENTS */
+.marq{overflow:hidden;border-block:1px solid var(--line);padding-block:26px;margin-top:clamp(50px,7vw,80px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq-track{display:flex;gap:64px;width:max-content;animation:marquee 40s linear infinite}
+.marq-track span{font-family:var(--body);font-weight:500;font-size:clamp(26px,3vw,38px);color:rgba(241,232,218,.55);white-space:nowrap;display:flex;align-items:center;gap:64px}
+.marq-track span::after{content:"✦";font-style:normal;font-size:14px;color:var(--amber-deep)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* NEXT */
+.next{text-align:center;display:grid;justify-items:center;gap:26px}
+.next p{color:var(--mute);max-width:52ch}
+.next .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+footer{border-top:1px solid var(--line);padding-block:32px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.foot nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--amber)}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,6,5,.96);display:grid;grid-template-rows:auto 1fr auto;padding:calc(env(safe-area-inset-top,0px) + 16px) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 16px)}
+.lb[hidden]{display:none!important}
+.lb-top,.lb-bot{display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+.lb-stage{display:grid;place-items:center;min-height:0}
+.lb-stage img{max-height:78vh;max-width:100%;width:auto;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb button{background:none;border:1px solid var(--line);color:var(--paper);width:48px;height:48px;cursor:pointer;font-size:18px;display:grid;place-items:center}
+.lb button:hover{border-color:var(--amber);color:var(--amber)}
+.lb-title{font-family:var(--body);font-weight:600;font-size:27px;color:var(--paper);text-transform:none;letter-spacing:0}
+
+.reveal{transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.1,1)}
+.js .reveal.pre{opacity:.001;transform:translateY(36px)}
+.js .ms.pre .frame{opacity:0;transform:rotate(var(--r,-2deg)) translateY(40px) scale(.96)}
+.ms .frame{transition:opacity 1s .15s,transform .9s cubic-bezier(.2,.7,.1,1)}
+
+@media (max-width:900px){
+  .links{position:fixed;inset:calc(72px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;background:var(--ink);border-bottom:1px solid var(--line);padding:8px var(--gutter) 24px;transform:translateY(-8px);opacity:0;pointer-events:none;transition:all .3s}
+  .links a{padding:16px 0;width:100%;border-bottom:1px solid var(--line);font-size:14px}
+  .links .book{margin-top:16px;text-align:center;border-bottom:1px solid var(--amber)}
+  .nav.open .links{opacity:1;transform:none;pointer-events:auto}
+  .nav.open{background:var(--ink)}
+  .burger{display:block}
+  .jhero-in{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div:nth-child(3){padding-left:0;border-left:0}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .tl-rail{left:7px}
+  .ms{grid-template-columns:30px 1fr;row-gap:26px}
+  .ms-dot{grid-column:1;justify-self:start}
+  .ms .ms-copy,.ms:nth-child(even) .ms-copy{grid-column:2;grid-row:1;justify-self:start;text-align:left;max-width:none}
+  .ms .ms-media,.ms:nth-child(even) .ms-media{grid-column:2;grid-row:2;justify-self:start;max-width:none}
+  .ms:not(:nth-child(even)) .tags,.ms:not(:nth-child(even)) .ms-stat{justify-content:flex-start}
+  .ms-dot{align-self:start;margin-top:18px}
+}
+@media (prefers-reduced-motion:reduce) and (max-width:0px){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ===== Unified cream + blue theme overrides ===== */
+.grain{opacity:.05;mix-blend-mode:multiply}
+::selection{background:var(--paper);color:#fff}
+.nav.solid{background:rgba(239,235,221,.9)}
+.links .book:hover{color:#fff}
+.btn{color:#fff}
+.btn:hover{background:var(--amber-deep);color:#fff}
+.btn.ghost{color:var(--paper);border-color:rgba(28,74,147,.4)}
+.btn.ghost:hover{background:transparent}
+.vf i{border-color:rgba(28,74,147,.5)}
+.lb{background:rgba(239,235,221,.97)}
+.lb-stage img{box-shadow:0 30px 70px rgba(28,74,147,.25)}
+.jhero::before{background:radial-gradient(circle,rgba(28,74,147,.12) 0%,rgba(28,74,147,.04) 38%,transparent 66%)}
+.big-year{-webkit-text-stroke:1px rgba(28,74,147,.16)}
+.jhero-side p{color:var(--mute)}
+.yearbar{background:rgba(239,235,221,.9)}
+.yr.on{color:#fff}
+.tl-rail i{box-shadow:0 0 12px rgba(28,74,147,.35)}
+.ms.lit .ms-dot{box-shadow:0 0 0 6px rgba(28,74,147,.15)}
+.frame{background:#FBF9F3;box-shadow:0 30px 60px -24px rgba(10,26,56,.45)}
+.frame .pic{background:linear-gradient(135deg,#DDD7C5,#E7E2D2 60%,#CDC6B1)}
+.frame .ph{color:rgba(28,74,147,.22)}
+.frame figcaption{color:var(--mute)}
+.marq-track span{color:rgba(28,74,147,.55)}
+.soc{display:flex;gap:inherit;flex:none}
+.btn.sq{padding:0;width:var(--sq,55.4px);height:var(--sq,55.4px);justify-content:center;flex:none}
+.btn.sq svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.btn.sq svg .dot{fill:currentColor;stroke:none}
+.btn.sq:hover{gap:12px}
+[hidden]{display:none!important}
+
+/* ===== TEXT MOTION (headings, labels, paragraphs, buttons) ===== */
+/* Word-by-word heading rise */
+.tw{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .08em .14em 0;margin:0 -.08em -.14em 0}
+.tw-i{display:inline-block;transform-origin:0 100%;transition:transform 1s cubic-bezier(.2,.75,.1,1) var(--d,0ms),opacity .8s ease var(--d,0ms)}
+.tm-on .tm-words:not(.tm-in) .tw-i{transform:translateY(112%) rotate(5deg);opacity:0}
+
+/* Italic accent words: light sweep after they rise, again on hover */
+.tm-words em .tw-i{background:linear-gradient(100deg,var(--amber) 0 38%,#86AEEA 50%,var(--amber) 62% 100%) 100% 0/260% 100% no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.tm-words.tm-in em .tw-i{animation:tmShine 1.8s cubic-bezier(.4,0,.2,1) calc(var(--d,0ms) + .7s) both}
+@media (hover:hover){.tm-words.tm-in:hover em .tw-i{animation:tmShine2 1.3s cubic-bezier(.4,0,.2,1) both}}
+@keyframes tmShine{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes tmShine2{from{background-position:100% 0}to{background-position:0 0}}
+
+/* Eyebrow labels "type in" with a viewfinder-style flicker */
+.tc{display:inline-block;white-space:pre}
+.tm-on .tm-type:not(.tm-in) .tc{opacity:0}
+.tm-type.tm-in .tc{animation:tmType .38s steps(4,end) var(--d,0ms) both}
+@keyframes tmType{0%{opacity:0}35%{opacity:1}55%{opacity:.2}75%{opacity:1}100%{opacity:1}}
+
+/* Paragraphs: soft focus-pull, like a lens finding focus */
+.tm-focus{transition:opacity 1.1s ease,filter 1.1s ease,transform 1.1s cubic-bezier(.2,.75,.1,1)}
+.tm-on .tm-focus:not(.tm-in){opacity:0;filter:blur(8px);transform:translateY(16px)}
+
+/* Staggered groups (stats, tags, info rows, award cards) */
+.tm-on .tm-stagger:not(.tm-in) > *{opacity:0}
+.tm-stagger.tm-in > *{animation:tmUp .8s cubic-bezier(.2,.75,.1,1) var(--d,0ms) both}
+@keyframes tmUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* Brand: letters rise on load, wave on hover */
+.bc{display:inline-block}
+.tcw{white-space:nowrap}
+.brand b span{font:inherit;letter-spacing:inherit;color:inherit;text-transform:none}
+.tm-on .brand:not(.tm-loaded) .bc{animation:tmRise .9s cubic-bezier(.2,.75,.1,1) var(--d,0ms) both}
+@media (hover:hover){.brand.tm-loaded:hover .bc{animation:tmWave .55s ease var(--d,0ms)}}
+@keyframes tmRise{from{opacity:0;transform:translateY(60%) rotate(8deg)}to{opacity:1;transform:none}}
+@keyframes tmWave{40%{transform:translateY(-22%)}100%{transform:none}}
+
+/* Buttons: label rolls letter by letter on hover */
+.tm-roll{display:inline-block;overflow:hidden;line-height:1.3;height:1.3em;white-space:pre}
+.tm-roll .rc{display:inline-block;text-shadow:0 1.3em currentColor;transition:transform .5s cubic-bezier(.65,0,.25,1) var(--d,0ms)}
+@media (hover:hover){
+  .btn:hover .tm-roll .rc,.links .book:hover .tm-roll .rc,.svc-cta:hover .tm-roll .rc{transform:translateY(-1.3em)}
+  .btn > span[aria-hidden="true"]{display:inline-block;transition:transform .35s cubic-bezier(.2,.75,.1,1)}
+  .btn:hover > span[aria-hidden="true"]{transform:translateX(4px)}
+  .btn.sq svg{transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+  .btn.sq:hover svg{transform:scale(1.16) rotate(-8deg)}
+}
+
+/* Nav + footer links: underline draws in */
+@media (min-width:901px){
+  .links a:not(.book){background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:3px;transition:opacity .2s,color .2s,background-size .4s cubic-bezier(.2,.75,.1,1)}
+  .links a:not(.book):hover,.links a[aria-current="page"]{background-size:100% 1px}
+}
+.foot nav a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:2px;transition:color .2s,background-size .4s cubic-bezier(.2,.75,.1,1)}
+.foot nav a:hover{background-size:100% 1px}
+/* Mobile menu items slide in one after another */
+@media (max-width:900px){.nav.open .links a{animation:tmUp .5s cubic-bezier(.2,.75,.1,1) var(--d,0ms) both}}
+
+/* Journey: outlined year fills with colour when its milestone lights up */
+.ms-year{background:linear-gradient(90deg,var(--amber) 50%,transparent 50%) 100% 0/200% 100% no-repeat;-webkit-background-clip:text;background-clip:text;transition:background-position 1.4s cubic-bezier(.2,.75,.1,1)}
+.ms.lit .ms-year{background-position:0 0}
+.big-year.tm-flip{animation:tmFlip .7s cubic-bezier(.2,.75,.1,1)}
+@keyframes tmFlip{from{opacity:0;transform:translateY(6%) scale(.98);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.marq:hover .marq-track{animation-play-state:paused}
+
+@media (prefers-reduced-motion:reduce) and (max-width:0px){
+  .tm-words em .tw-i{background:none;color:inherit;-webkit-text-fill-color:currentColor}
+}
+
+/* ===== CREDIT WATERMARK ===== */
+.credit{max-width:var(--max);margin:22px auto 0;padding:18px var(--gutter) 0;border-top:1px dashed var(--line);text-align:center;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);opacity:.75}
+.credit b{font-weight:600;color:var(--paper)}
+
+/* ===== TEXT MOTION · BOOST (stronger, more visible) ===== */
+.tm-on .tm-words:not(.tm-in) .tw-i{transform:translateY(120%) rotate(8deg) scale(.9);opacity:0;filter:blur(6px)}
+.tw-i{transition:transform 1.2s cubic-bezier(.16,.9,.1,1) var(--d,0ms),opacity .9s ease var(--d,0ms),filter 1s ease var(--d,0ms)}
+/* accent words keep shining every few seconds */
+.tm-words.tm-in em .tw-i{animation:tmShine 1.8s cubic-bezier(.4,0,.2,1) calc(var(--d,0ms) + .9s) both,tmShineLoop 5.5s ease-in-out calc(var(--d,0ms) + 3.5s) infinite}
+@keyframes tmShineLoop{0%,55%{background-position:100% 0}100%{background-position:0 0}}
+
+/* eyebrow: a line draws in first, then letters type */
+.tm-type.eyebrow::before{content:"";display:inline-block;vertical-align:middle;height:1.5px;width:0;margin-right:0;background:currentColor;transition:width .7s cubic-bezier(.2,.75,.1,1),margin .7s}
+.tm-type.eyebrow.tm-in::before{width:30px;margin-right:12px}
+.tm-type.tm-in .tc{animation:tmType2 .5s cubic-bezier(.2,.75,.1,1) calc(var(--d,0ms) + .25s) both}
+@keyframes tmType2{0%{opacity:0;transform:translateY(-60%);filter:blur(3px)}50%{opacity:1}70%{opacity:.35}100%{opacity:1;transform:none;filter:none}}
+
+/* paragraphs: deeper focus-pull */
+.tm-focus{transition:opacity 1.3s ease,filter 1.3s ease,transform 1.3s cubic-bezier(.16,.9,.1,1)}
+.tm-on .tm-focus:not(.tm-in){opacity:0;filter:blur(14px);transform:translateY(34px)}
+
+/* groups: bigger lift + scale */
+@keyframes tmUp{from{opacity:0;transform:translateY(40px) scale(.94)}to{opacity:1;transform:none}}
+
+/* photos & cards: wipe open like a shutter */
+.tm-on .tm-wipe:not(.tm-in){clip-path:inset(100% 0 0 0)}
+.tm-wipe.tm-in{animation:tmWipe 1.3s cubic-bezier(.7,0,.2,1) backwards}
+@keyframes tmWipe{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+.tm-wipe.tm-in img{animation:tmZoom 1.8s cubic-bezier(.2,.75,.1,1) backwards}
+@keyframes tmZoom{from{transform:scale(1.25)}to{transform:none}}
+
+/* scroll progress bar */
+.tm-prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--amber-deep,var(--paper)),var(--paper));z-index:120;pointer-events:none}
+
+/* custom cursor (desktop only) */
+.tm-cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1.5px solid var(--paper);border-radius:50%;pointer-events:none;z-index:130;display:grid;place-items:center;font:600 9px/1 var(--body);letter-spacing:.16em;color:#fff;text-transform:uppercase;transition:width .3s,height .3s,margin .3s,background .3s,border-color .3s,opacity .3s;opacity:0}
+.tm-cur.on{opacity:1}
+.tm-cur.link{width:56px;height:56px;margin:-28px 0 0 -28px;background:rgba(28,74,147,.12)}
+.tm-cur.view{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--paper);border-color:var(--paper)}
+.tm-cur span{opacity:0;transition:opacity .2s}
+.tm-cur.view span{opacity:1}
+.tm-dot{position:fixed;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--paper);pointer-events:none;z-index:131;opacity:0;transition:opacity .3s}
+.tm-dot.on{opacity:1}
+@media (hover:none),(pointer:coarse){.tm-cur,.tm-dot{display:none}}
+
+/* hover lift on cards */
+@media (hover:hover){
+  .rec,.step{transition:background .3s,transform .45s cubic-bezier(.2,.75,.1,1),box-shadow .45s}
+  .rec:hover,.step:hover{transform:translateY(-6px);box-shadow:0 18px 40px -22px rgba(28,74,147,.45)}
+}
+
+/* ===== MOBILE MOTION (works without a mouse) ===== */
+html{-webkit-tap-highlight-color:transparent}
+
+/* tap feedback: press-in + ripple */
+.btn,.links .book,.svc-cta{position:relative;overflow:hidden;isolation:isolate}
+.btn:active,.links .book:active,.svc-cta:active,.rec:active,.oc-card:active,.chip:active,.yr:active{scale:.95;transition:scale .12s}
+.tm-ripple{position:absolute;border-radius:50%;pointer-events:none;background:currentColor;opacity:.28;transform:scale(0);animation:tmRipple .7s ease-out forwards;z-index:-1}
+@keyframes tmRipple{to{transform:scale(1);opacity:0}}
+
+/* primary buttons breathe with a soft pulse ring */
+.btn:not(.ghost){box-shadow:0 0 0 0 rgba(28,74,147,.45);animation:tmPulse 2.6s ease-out 1.5s infinite}
+@keyframes tmPulse{0%{box-shadow:0 0 0 0 rgba(28,74,147,.45)}70%,100%{box-shadow:0 0 0 14px rgba(28,74,147,0)}}
+
+/* icon buttons gently bob, one after another */
+.soc .btn.sq svg{animation:tmBob 3.2s ease-in-out infinite}
+.soc .btn.sq:nth-child(2) svg{animation-delay:.35s}
+.soc .btn.sq:nth-child(3) svg{animation-delay:.7s}
+@keyframes tmBob{0%,100%{transform:none}50%{transform:translateY(-3px) rotate(-6deg)}}
+
+/* scroll-linked: headings drift, photos zoom as you scroll */
+h2.tm-words{will-change:translate}
+.tm-par img{will-change:scale}
+
+
+
+/* ===== SCROLL-UP MOTION (things coming in from the top animate downward) ===== */
+.tm-words[data-tm-from=top] .tw-i{transform-origin:0 0}
+.tm-on .tm-words[data-tm-from=top]:not(.tm-in) .tw-i{transform:translateY(-120%) rotate(-8deg) scale(.9)}
+.tm-on .tm-type[data-tm-from=top]:not(.tm-in) .tc{opacity:0}
+.tm-type[data-tm-from=top].tm-in .tc{animation-name:tmTypeDown}
+@keyframes tmTypeDown{0%{opacity:0;transform:translateY(60%);filter:blur(3px)}50%{opacity:1}70%{opacity:.35}100%{opacity:1;transform:none;filter:none}}
+.tm-on .tm-focus[data-tm-from=top]:not(.tm-in){transform:translateY(-34px)}
+.tm-stagger[data-tm-from=top].tm-in > *{animation-name:tmDown}
+@keyframes tmDown{from{opacity:0;transform:translateY(-40px) scale(.94)}to{opacity:1;transform:none}}
+.tm-on .tm-wipe[data-tm-from=top]:not(.tm-in){clip-path:inset(0 0 100% 0)}
+.tm-wipe[data-tm-from=top].tm-in{animation-name:tmWipeDown}
+@keyframes tmWipeDown{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* timeline photos & process steps also replay both ways */
+.tm-pop{transition:opacity 1.1s ease,filter 1.1s ease,transform 1.1s cubic-bezier(.16,.9,.1,1)}
+.tm-on .tm-pop:not(.tm-in){opacity:0;filter:blur(10px);transform:translateY(60px) scale(.92)}
+.tm-on .tm-pop[data-tm-from=top]:not(.tm-in){transform:translateY(-60px) scale(.92)}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand" aria-label="Shiva Ram, home"><b>ShivaRam</b></a>
+    <nav class="links" id="links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#services" hidden>Services</a>
+      <a href="journey.html" aria-current="page">Journey</a>
+      <a href="index.html#about">About</a>
+      <a href="https://www.instagram.com/shivaram.studio?exln=MTViNjJ6Y3pjbXpoOQ==" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@shivaramstudio5955" target="_blank" rel="noopener">Youtube</a>
+      <a href="https://wa.me/919849056548?text=Hi%20Shivaram%20Studio%2C%20I%27d%20like%20to%20enquire%20about%20a%20shoot." target="_blank" rel="noopener">WhatsApp</a>
+      
+      <a href="index.html#contact" class="book">Book a shoot</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="jhero" aria-label="Introduction">
+    <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="big-year" id="bigYear" aria-hidden="true">2020</div>
+    <div class="wrap jhero-in">
+      <div>
+        <span class="eyebrow" id="heroEyebrow">The journey · Roll 00 → Now</span>
+        <h1><span><b>From one camera</b></span><span><b>to a studio.</b></span></h1>  <!--em>a studio.</em-->
+      </div>
+      <div class="jhero-side">
+        <p>Every milestone, award and first-time win, frame by frame. This is how Shivaram &amp; Studio's grew from weekend shoots in Warangal into a full photo and video studio.</p>
+        <a class="scroll-cue" href="#timeline">Scroll the timeline</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-band" aria-label="Studio in numbers">
+    <div class="wrap stats" id="stats"></div>
+  </section>
+
+  <!-- YEAR BAR -->
+  <div class="yearbar" aria-label="Jump to year">
+    <div class="wrap yearbar-in" id="yearbar"></div>
+    <div class="prog"><i id="prog"></i></div>
+  </div>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <span class="eyebrow">Milestones</span>
+          <h2>Every chapter, <em>developed</em></h2>
+        </div>
+        <p class="lead">From the very first paid shoot to the work we're making today. Tap any photograph to see it full size.</p>
+      </div>
+      <div class="tl" id="tl">
+        <div class="tl-rail" aria-hidden="true"><i id="railFill"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="rec-sec" id="recognition">
+    <div class="wrap">
+      <div class="head reveal">
+        <div>
+          <span class="eyebrow">Recognition</span>
+          <h2>Awards Features</h2>
+        </div>
+        <p class="lead">Moments where the work was noticed beyond the people we shot for.</p>
+      </div>
+      <div class="rec-grid reveal" id="recGrid"></div>
+      <div class="marq" aria-label="Clients we've worked with">
+        <div class="marq-track" id="marq"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section>
+    <div class="wrap next reveal">
+      <span class="eyebrow">Next frame</span>
+      <h2>The next chapter could be <em>yours.</em></h2>
+      <p>Weddings, brands, portraits or reels: tell me what you're planning and let's add it to the story.</p>
+      <div class="row">
+        <a class="btn" href="index.html#contact">Book a shoot <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="index.html#work">See the work</a>
+        <span class="soc"><a class="btn ghost sq" href="https://www.instagram.com/shivaram.studio?exln=MTViNjJ6Y3pjbXpoOQ==" target="_blank" rel="noopener" aria-label="Shivaram Studio on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="dot"/></svg></a>
+            <a class="btn ghost sq" href="https://www.youtube.com/@shivaramstudio5955" target="_blank" rel="noopener" aria-label="Shivaram Studio on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.2v5.6l4.8-2.8z" class="dot"/></svg></a>
+            <a class="btn ghost sq" href="https://wa.me/919849056548?text=Hi%20Shivaram%20Studio%2C%20I%27d%20like%20to%20enquire%20about%20a%20shoot." target="_blank" rel="noopener" aria-label="Chat with Shivaram Studio on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 19.2 3.5 20.5l1.4-3.9A8.5 8.5 0 1 1 7.4 19.2z"/><path class="dot" transform="translate(12 12) scale(.74) translate(-12 -12)" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Shivaram &amp; Studio's</span>
+    <nav><a href="index.html#work">Work</a><a href="index.html#services" hidden>Services</a><a href="journey.html">Journey</a><a href="https://www.instagram.com/shivaram.studio?exln=MTViNjJ6Y3pjbXpoOQ==" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@shivaramstudio5955" target="_blank" rel="noopener">YouTube</a><a href="https://wa.me/919849056548?text=Hi%20Shivaram%20Studio%2C%20I%27d%20like%20to%20enquire%20about%20a%20shoot." target="_blank" rel="noopener">WhatsApp</a></nav>
+    <span>Warangal · IN</span>
+  </div>
+  <div class="credit">Designed by <b>Pixelomedia</b></div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-top"><span id="lb-count"></span><button id="lb-close" aria-label="Close viewer">✕</button></div>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-bot">
+    <div><div class="lb-title" id="lb-title"></div><div id="lb-sub"></div></div>
+    <div style="display:flex;gap:8px"><button id="lb-prev" aria-label="Previous">←</button><button id="lb-next" aria-label="Next">→</button></div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add("js");
+
+/* ═══════════════════════════════════════════════════════════
+   EDIT YOUR STORY HERE
+   ─ img: path to your photo (e.g. "imgs/journey/2020.jpg").
+          Leave "" or a missing file shows a styled placeholder.
+   ─ ar:  photo shape, e.g. "4/3", "3/4", "1/1", "16/9".
+   ─ now: true on the latest milestone (shows a live REC dot).
+   Add or remove entries freely; the year bar and timeline update.
+   ═══════════════════════════════════════════════════════════ */
+const MILESTONES = [
+  {year:"1995", month:"January", chapter:"The foundation of Shivaram Studios.", title:"The Man Behind The Dream",
+   text:"Behind every dream is someone who believes in it before the world does. He was the inspiration, the strength, and the foundation that turned my dream into a vision worth pursuing.The man who stood behind the dream, and the reason Shivaram Studios began to take shape.",
+   /*tags:["Weddings","Portraits"], stat:{n:"25", label:"Shoots that year"}*/
+   img:"journey_imgs/02.jpg", ar:"3/4"},
+  {year:"2009", month:"The day a dream was born.", chapter:"2009 · THE FIRST MILESTONE", title:"The Duo Father And Son Into Creative Fields",
+   text:"Every dream begins with a small step — a passion for capturing moments and a vision to create something meaningful.Every frame, every challenge, and every little milestone brought me closer to my dream.Shivaram Studios was never just a name; it was a promise to myself.Not just the beginning of a studio, but the birth of a legacy.",
+   tags:["ONE DREAM · ONE VISION · THE FIRST MILESTONE"], /*stat:{n:"1", label:"Camera, one lens"}*/
+   img:"journey_imgs/01.jpg", ar:"4/3"},
+  {year:"2013", month:"September", chapter:"Roll 03", title:"started shivaram studios space at Gopalpur, Hanamkonda",
+   text:"A small studio space in Warangal with proper lighting, a backdrop wall and room for clients to sit down and plan.",
+   tags:["Studio","Milestone"], stat:{n:"1st", label:"Studio space"},
+   img:"journey_imgs/03.jpg", ar:"16/10"},
+  {year:"2019", month:"August", chapter:"Roll 04", title:"Added cinematic promos and drones into studio",
+   text:"Cinematic films, reels and licensed aerial coverage joined the services, so couples and brands could book everything in one place.",
+   tags:["Cinematic","Drone","Reels"], stat:{n:"500+", label:"Films delivered"},
+   img:"journey_imgs/04.jpg", ar:"16/9"},
+  /*{year:"2024", month:"November", chapter:"Roll 05", title:"Brands come calling",
+   text:"First commercial campaigns for local businesses and restaurants, plus our first shoots outside Telangana.",
+   tags:["Commercial","Travel"], stat:{n:"14", label:"Cities covered"},
+   img:"journey_imgs/05.jpg", ar:"1/1"},
+  {year:"2025", month:"May", chapter:"Roll 06", title:"The team grows",
+   text:"Second shooters, an editor and LED screen setups for live events. Bigger weddings, faster delivery, same hand-edited care.",
+   tags:["Team","LED screens","Events"], stat:{n:"150+", label:"Shoots delivered"},
+   img:"journey_imgs/06.jpg", ar:"4/3"},
+  {year:"2026", month:"Today", chapter:"Now shooting", title:"Still chasing the light",
+   text:"Six years in, with 180+ shoots and counting. The approach hasn't changed: plan carefully, shoot patiently, edit every frame by hand.",
+   tags:["Booking 2027"], stat:{n:"180+", label:"And counting"},
+   img:"journey_imgs/07.jpg", ar:"3/4", now:true}*/
+];
+
+const STATS = [
+  {n:25,   suffix:"",  label:"Years shooting"},
+  {n:180, suffix:"+", label:"Shoots delivered"},
+  {n:14,  suffix:"",  label:"Cities"},
+  {n:500, suffix:"+", label:"Films & reels"}
+];
+
+/* type: "award" | "feature" | "milestone" */
+const RECOGNITION = [
+  {type:"award",     year:"2023", title:"Best Wedding Story", text:"Recognised at a regional wedding photography showcase for a monsoon wedding film.", by:"Replace with the award name"},
+  {type:"feature",   year:"2024", title:"Featured in local press", text:"A photo essay on Warangal's heritage at golden hour, printed and shared online.", by:"Replace with publication"},
+  {type:"milestone", year:"2024", title:"10K on Instagram", text:"The community around @shivaram_photography crossed ten thousand followers.", by:"Instagram"},
+  {type:"award",     year:"2025", title:"Top-rated studio", text:"5-star average across client reviews, with most new bookings coming from referrals.", by:"Client reviews"}
+];
+
+const CLIENTS = ["Client one","Local café","Wedding studio","Brand name","Restaurant","Fashion label","Event company","Real estate"];
+/* ═══════════════════════════════════════════════════════════ */
+
+const $ = s => document.querySelector(s);
+const still = false /* animations always on (client request) */;
+
+/* nav */
+const nav = $("#nav");
+const onNav = () => nav.classList.toggle("solid", scrollY > 40);
+addEventListener("scroll", onNav, {passive:true}); onNav();
+$("#burger").addEventListener("click", () => { const o = nav.classList.toggle("open"); $("#burger").setAttribute("aria-expanded", o); });
+document.querySelectorAll("#links a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+
+/* hero */
+const first = MILESTONES[0]?.year || "", last = MILESTONES[MILESTONES.length - 1]?.year || "";
+$("#bigYear").textContent = first;
+$("#heroEyebrow").textContent = `The journey · ${first} – Now`;
+
+/* stats */
+$("#stats").innerHTML = STATS.map(s => `<div><b class="mono" data-count="${s.n}">${s.n}</b><span>${s.label}</span></div>`).join("");
+$("#stats").querySelectorAll("b").forEach((b, i) => { if (STATS[i].suffix) b.dataset.suffix = STATS[i].suffix; b.innerHTML = STATS[i].n + (STATS[i].suffix ? `<sup>${STATS[i].suffix}</sup>` : ""); });
+
+/* timeline */
+const tl = $("#tl");
+const tilts = [-2.5, 2, -1.5, 2.5, -2, 1.5, -1];
+MILESTONES.forEach((m, i) => {
+  const el = document.createElement("article");
+  el.className = "ms" + (m.now ? " now" : "");
+  el.id = "y" + m.year + (MILESTONES.findIndex(x => x.year === m.year) === i ? "" : "-" + i);
+  el.dataset.year = m.year;
+  el.innerHTML = `
+    <div class="ms-copy">
+      <div class="ms-year">${m.year}</div>
+      <div class="ms-meta"><b>${m.chapter}</b> · ${m.month}</div>
+      <h3>${m.title}</h3>
+      <p>${m.text}</p>
+      ${m.tags?.length ? `<div class="tags">${m.tags.map(t => `<span>${t}</span>`).join("")}</div>` : ""}
+      ${m.stat ? `<div class="ms-stat"><b>${m.stat.n}</b><span>${m.stat.label}</span></div>` : ""}
+    </div>
+    <span class="ms-dot" aria-hidden="true"></span>
+    <div class="ms-media">
+      <figure class="frame" tabindex="0" style="--r:${tilts[i % tilts.length]}deg" data-i="${i}" aria-label="Open photo: ${m.title}">
+        <div class="pic" style="--ar:${m.ar || "4/3"}"><span class="ph">${m.year}</span></div>
+        <figcaption><span>${m.chapter}</span><span>${m.year} · ${String(i + 1).padStart(2, "0")}</span></figcaption>
+      </figure>
+    </div>`;
+  if (m.img) {
+    const img = new Image();
+    img.alt = `${m.title}, ${m.year}`;
+    img.loading = "lazy";
+    img.onload = () => { el.querySelector(".ph")?.remove(); m._ok = true; };
+    img.onerror = () => img.remove();
+    img.src = m.img;
+    el.querySelector(".pic").appendChild(img);
+  }
+  tl.appendChild(el);
+});
+
+/* year bar */
+const bar = $("#yearbar");
+[...new Set(MILESTONES.map(m => m.year))].forEach(y => {
+  const a = document.createElement("a");
+  a.className = "yr"; a.href = "#y" + y; a.textContent = y; a.dataset.y = y;
+  bar.appendChild(a);
+});
+const items = [...tl.querySelectorAll(".ms")];
+
+/* rail fill + active year + progress */
+const railFill = $("#railFill"), prog = $("#prog"), bigYear = $("#bigYear");
+let activeY = "";
+function onScroll(){
+  const r = tl.getBoundingClientRect();
+  const mid = innerHeight * .55;
+  const filled = Math.min(Math.max(mid - r.top, 0), r.height);
+  railFill.style.height = filled + "px";
+  prog.style.width = (r.height ? filled / r.height * 100 : 0) + "%";
+  let cur = items[0];
+  items.forEach(it => {
+    const top = it.getBoundingClientRect().top + it.offsetHeight / 2;
+    if (top < mid + 40) { it.classList.add("lit"); cur = it; } else it.classList.remove("lit");
+  });
+  const y = cur?.dataset.year;
+  if (y && y !== activeY) {
+    activeY = y;
+    bar.querySelectorAll(".yr").forEach(a => {
+      const on = a.dataset.y === y;
+      a.classList.toggle("on", on);
+      if (on && bar.scrollWidth > bar.clientWidth) a.scrollIntoView({block:"nearest", inline:"center", behavior: still ? "auto" : "smooth"});
+    });
+    if (r.top < innerHeight) bigYear.textContent = y;
+  }
+}
+let tick = false;
+addEventListener("scroll", () => { if (!tick) { tick = true; requestAnimationFrame(() => { onScroll(); tick = false; }); } }, {passive:true});
+addEventListener("resize", onScroll);
+onScroll();
+
+/* recognition */
+const ICONS = {
+  award:`<svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>`,
+  feature:`<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>`,
+  milestone:`<svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>`
+};
+$("#recGrid").innerHTML = RECOGNITION.map(r => `
+  <article class="rec">
+    <div class="k"><span>${r.type} · ${r.year}</span>${ICONS[r.type] || ICONS.milestone}</div>
+    <h3>${r.title}</h3>
+    <p>${r.text}</p>
+    <small>${r.by}</small>
+  </article>`).join("");
+const clientRow = CLIENTS.map(c => `<span>${c}</span>`).join("");
+$("#marq").innerHTML = clientRow + clientRow;
+
+/* lightbox (only photos that loaded) */
+const lb = $("#lb"); let cur = 0, lastFocus = null;
+const shown = () => MILESTONES.map((m, i) => m._ok ? i : -1).filter(i => i > -1);
+function show(i){
+  cur = i; const m = MILESTONES[i], list = shown();
+  $("#lb-img").src = m.img; $("#lb-img").alt = m.title;
+  $("#lb-title").textContent = m.title;
+  $("#lb-sub").textContent = `${m.chapter} · ${m.month} ${m.year}`;
+  $("#lb-count").textContent = `${String(list.indexOf(i) + 1).padStart(2,"0")} / ${String(list.length).padStart(2,"0")}`;
+}
+function openLb(i){ if (!MILESTONES[i]._ok) return; lastFocus = document.activeElement; show(i); lb.hidden = false; document.body.style.overflow = "hidden"; $("#lb-close").focus(); }
+function closeLb(){ lb.hidden = true; document.body.style.overflow = ""; lastFocus?.focus(); }
+function step(d){ const l = shown(); show(l[(l.indexOf(cur) + d + l.length) % l.length]); }
+tl.querySelectorAll(".frame").forEach(f => {
+  f.addEventListener("click", () => openLb(+f.dataset.i));
+  f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLb(+f.dataset.i); } });
+});
+$("#lb-close").addEventListener("click", closeLb);
+$("#lb-prev").addEventListener("click", () => step(-1));
+$("#lb-next").addEventListener("click", () => step(1));
+lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("lb-stage")) closeLb(); });
+addEventListener("keydown", e => {
+  if (lb.hidden) return;
+  if (e.key === "Escape") closeLb();
+  if (e.key === "ArrowRight") step(1);
+  if (e.key === "ArrowLeft") step(-1);
+});
+/* reveal + counters */
+if ("IntersectionObserver" in window && !still) {
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.remove("pre"); io.unobserve(en.target); }
+  }), {rootMargin:"0px 0px -10% 0px"});
+  document.querySelectorAll(".reveal, .ms").forEach(el => {
+    if (el.getBoundingClientRect().top > innerHeight * .9) { el.classList.add("pre"); io.observe(el); }
+  });
+  const cio = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el = en.target, end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now();
+    const run = t => { const k = Math.min((t - t0) / 1400, 1); el.innerHTML = Math.round(end * (1 - Math.pow(1 - k, 3))) + (suf ? `<sup>${suf}</sup>` : ""); if (k < 1) requestAnimationFrame(run); };
+    requestAnimationFrame(run); cio.unobserve(el);
+  }), {threshold:.6});
+  document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
+}
+$("#yr").textContent = new Date().getFullYear();
+</script>
+
+<script>
+/* ===== TEXT MOTION ===== */
+(() => {
+  if (false /* animations always on (client request) */ || !("IntersectionObserver" in window)) return;
+  const root = document.documentElement;
+  const all = s => [...document.querySelectorAll(s)];
+
+  const walkText = (node, fn) => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) fn(n);
+      else if (n.nodeType === 1 && !/^(SVG|SCRIPT|STYLE|SUP|BR)$/i.test(n.tagName)) walkText(n, fn);
+    });
+  };
+
+  const splitWords = el => {
+    let i = 0;
+    walkText(el, t => {
+      const parts = t.textContent.split(/(\s+)/);
+      if (!parts.some(p => p.trim())) return;
+      const frag = document.createDocumentFragment();
+      parts.forEach(p => {
+        if (!p) return;
+        if (!p.trim()) { frag.append(p); return; }
+        const o = document.createElement("span"), w = document.createElement("span");
+        o.className = "tw"; w.className = "tw-i"; w.textContent = p;
+        w.dataset.i = i++;
+        o.append(w); frag.append(o);
+      });
+      t.replaceWith(frag);
+    });
+    const step = Math.min(75, 900 / Math.max(i, 1));
+    el.querySelectorAll(".tw-i").forEach(w => w.style.setProperty("--d", Math.round(w.dataset.i * step) + "ms"));
+    el.classList.add("tm-words");
+  };
+
+  const splitChars = (el, cls, maxTotal, per) => {
+    let i = 0;
+    walkText(el, t => {
+      const frag = document.createDocumentFragment();
+      t.textContent.split(/(\s+)/).forEach(word => {
+        if (!word) return;
+        if (!word.trim()) { frag.append(word); return; }
+        const w = document.createElement("span");
+        w.className = "tcw";
+        [...word].forEach(c => {
+          const s = document.createElement("span");
+          s.className = cls; s.textContent = c; s.dataset.i = i++;
+          w.append(s);
+        });
+        frag.append(w);
+      });
+      t.replaceWith(frag);
+    });
+    const step = Math.min(per, maxTotal / Math.max(i, 1));
+    el.querySelectorAll("." + cls).forEach(s => s.style.setProperty("--d", Math.round(s.dataset.i * step) + "ms"));
+    return i;
+  };
+
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    const n = en.target;
+    if (en.isIntersecting) { clearTimeout(n._tmT); n._tmT = setTimeout(() => n.classList.add("tm-in"), +(n.dataset.tmDelay || 0)); }
+    else {
+      clearTimeout(n._tmT); n.classList.remove("tm-in");
+      const top = en.boundingClientRect.top < 0;
+      n.dataset.tmFrom = top ? "top" : "bottom";
+      if (n.classList.contains("tm-stagger")) {
+        const kids = [...n.children], step = Math.min(110, 700 / Math.max(kids.length, 1));
+        kids.forEach((k, i) => k.style.setProperty("--d", Math.round((top ? kids.length - 1 - i : i) * step) + "ms"));
+      }
+    }
+  }), {rootMargin:"0px 0px -6% 0px", threshold:0});
+
+  /* headings */
+  all("h2, .studio h3, .ms h3, .rec h3, .hint b").forEach(h => {
+    if (h.closest("[hidden]")) return;
+    splitWords(h);
+    io.observe(h);
+  });
+
+  /* eyebrow labels */
+  all(".eyebrow, .ms-meta, .rec .k > span").forEach(e => {
+    if (e.closest("[hidden]") || e.closest(".tm-type")) return;
+    splitChars(e, "tc", 1100, 30);
+    e.classList.add("tm-type");
+    io.observe(e);
+  });
+
+  /* paragraphs */
+  all(".head p.lead, .about-copy > p, .jhero-side p, .ms-copy > p, .rec p, .next > p, .studio p, .hero-side p").forEach(p => {
+    if (p.closest("[hidden]") || !p.textContent.trim()) return;
+    p.classList.add("tm-focus");
+    p.dataset.tmDelay = 120;
+    io.observe(p);
+  });
+
+  /* staggered groups */
+  all(".stats, .tags, .info, .rec-grid, .about-cta, .soc, .next .row").forEach(g => {
+    if (g.closest("[hidden]") || g.closest(".hero-copy")) return;
+    const kids = [...g.children];
+    if (!kids.length) return;
+    const step = Math.min(110, 700 / kids.length);
+    kids.forEach((k, i) => k.style.setProperty("--d", Math.round(i * step) + "ms"));
+    g.classList.add("tm-stagger");
+    io.observe(g);
+  });
+
+  /* brand letters */
+  all(".brand b").forEach(b => {
+    const n = splitChars(b, "bc", 600, 45);
+    const brand = b.closest(".brand");
+    setTimeout(() => brand.classList.add("tm-loaded"), 1100 + n * 45);
+  });
+
+  /* button label roll */
+  all(".btn:not(.sq), .links .book, .svc-cta").forEach(btn => {
+    const t = [...btn.childNodes].find(n => n.nodeType === 3 && n.textContent.trim());
+    if (!t) return;
+    const label = t.textContent.trim();
+    const wrap = document.createElement("span");
+    wrap.className = "tm-roll";
+    [...label].forEach((c, i) => {
+      const s = document.createElement("span");
+      s.className = "rc"; s.textContent = c;
+      s.style.setProperty("--d", i * 14 + "ms");
+      wrap.append(s);
+    });
+    if (!btn.hasAttribute("aria-label")) btn.setAttribute("aria-label", btn.textContent.replace(/\s+/g, " ").replace(/[→←]/g, "").trim());
+    t.replaceWith(wrap, " ");
+  });
+
+  /* mobile menu stagger */
+  all("#links a").forEach((a, i) => a.style.setProperty("--d", i * 45 + "ms"));
+
+  /* journey: count up milestone stats */
+  const cio = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    const b = en.target, m = b.dataset.tmCount.match(/^(\d+)(.*)$/), end = +m[1], suf = m[2], t0 = performance.now();
+    const run = t => { const k = Math.min((t - t0) / 1400, 1); b.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(run); };
+    requestAnimationFrame(run); cio.unobserve(b);
+  }), {threshold:.6});
+  all(".ms-stat b").forEach(b => {
+    const m = b.textContent.trim().match(/^(\d+)(.*)$/);
+    if (!m || +m[1] < 10) return;
+    b.dataset.tmCount = b.textContent.trim();
+    b.textContent = "0" + m[2];
+    cio.observe(b);
+  });
+
+  /* journey: big background year flips when it changes */
+  const big = document.getElementById("bigYear");
+  if (big) new MutationObserver(() => {
+    big.classList.remove("tm-flip"); void big.offsetWidth; big.classList.add("tm-flip");
+  }).observe(big, {childList:true, characterData:true, subtree:true});
+
+  root.classList.add("tm-on");
+})();
+</script>
+
+<script>
+/* ===== TEXT MOTION · BOOST ===== */
+(() => {
+  if (!("IntersectionObserver" in window)) return;
+  const all = s => [...document.querySelectorAll(s)];
+
+  /* photo / card shutter wipe */
+  const watch = new Map();
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    const els = watch.get(en.target) || [];
+    if (en.isIntersecting) els.forEach(el => el.classList.add("tm-in"));
+    else els.forEach(el => { el.classList.remove("tm-in"); el.dataset.tmFrom = en.boundingClientRect.top < 0 ? "top" : "bottom"; });
+  }), {rootMargin:"0px 0px -8% 0px", threshold:.05});
+  all(".portrait, .map, .oc-card").forEach(el => {
+    if (el.closest("[hidden]")) return;
+    el.classList.add("tm-wipe");
+    const host = el.parentElement;
+    if (!watch.has(host)) { watch.set(host, []); io.observe(host); }
+    watch.get(host).push(el);
+  });
+
+  /* scroll progress bar */
+  const bar = document.createElement("div"); bar.className = "tm-prog"; document.body.append(bar);
+  const prog = () => { const h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`; };
+  addEventListener("scroll", prog, {passive:true}); addEventListener("resize", prog); prog();
+
+  const fine = matchMedia("(hover:hover) and (pointer:fine)").matches;
+  if (!fine) return;
+
+  /* custom cursor */
+  const cur = document.createElement("div"); cur.className = "tm-cur"; cur.innerHTML = "<span>View</span>";
+  const dot = document.createElement("div"); dot.className = "tm-dot";
+  document.body.append(cur, dot);
+  let mx = -100, my = -100, cx = -100, cy = -100;
+  addEventListener("mousemove", e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.transform = `translate(${mx}px,${my}px)`;
+    cur.classList.add("on"); dot.classList.add("on");
+    const t = e.target.closest ? e.target : null;
+    const img = t && t.closest(".frame, .oc-card, .shot, .portrait, figure");
+    const link = t && t.closest("a, button, [role=button], .chip, input, textarea, select, label");
+    cur.classList.toggle("view", !!img && !link);
+    cur.classList.toggle("link", !!link);
+  }, {passive:true});
+  document.addEventListener("mouseleave", () => { cur.classList.remove("on"); dot.classList.remove("on"); });
+  (function loop(){
+    cx += (mx - cx) * .18; cy += (my - cy) * .18;
+    cur.style.transform = `translate(${cx}px,${cy}px)`;
+    requestAnimationFrame(loop);
+  })();
+
+  /* magnetic buttons */
+  all(".btn, .links .book").forEach(b => {
+    let tx = 0, ty = 0, x = 0, y = 0, raf = 0;
+    const tick = () => {
+      x += (tx - x) * .2; y += (ty - y) * .2;
+      b.style.translate = `${x.toFixed(2)}px ${y.toFixed(2)}px`;
+      if (Math.abs(tx - x) > .05 || Math.abs(ty - y) > .05) raf = requestAnimationFrame(tick); else raf = 0;
+    };
+    const go = () => { if (!raf) raf = requestAnimationFrame(tick); };
+    b.addEventListener("mousemove", e => {
+      const r = b.getBoundingClientRect();
+      tx = (e.clientX - r.left - r.width / 2) * .28; ty = (e.clientY - r.top - r.height / 2) * .38; go();
+    });
+    b.addEventListener("mouseleave", () => { tx = 0; ty = 0; go(); });
+  });
+})();
+</script>
+
+<script>
+/* ===== MOBILE MOTION ===== */
+(() => {
+  const all = s => [...document.querySelectorAll(s)];
+
+  /* ripple on tap / click */
+  addEventListener("pointerdown", e => {
+    const b = e.target.closest && e.target.closest(".btn, .links .book, .svc-cta");
+    if (!b) return;
+    const r = b.getBoundingClientRect(), d = Math.max(r.width, r.height) * 2.2;
+    const s = document.createElement("span");
+    s.className = "tm-ripple";
+    s.style.cssText = `width:${d}px;height:${d}px;left:${e.clientX - r.left - d / 2}px;top:${e.clientY - r.top - d / 2}px`;
+    b.append(s);
+    setTimeout(() => s.remove(), 750);
+  }, {passive:true});
+
+  /* scroll-linked drift + photo zoom */
+  const heads = all("h2.tm-words");
+  const pars = all(".portrait, .oc-card, .ms-media .pic").filter(el => el.querySelector("img") || el.matches(".pic"));
+  pars.forEach(el => el.classList.add("tm-par"));
+  let ticking = false;
+  const frame = () => {
+    const vh = innerHeight;
+    heads.forEach(h => {
+      const r = h.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      const p = (r.top + r.height / 2 - vh / 2) / vh;
+      h.style.translate = `0 ${(p * 40).toFixed(1)}px`;
+    });
+    pars.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const p = Math.min(Math.max((vh - r.top) / (vh + r.height), 0), 1);
+      const img = el.querySelector("img");
+      if (img) img.style.scale = (1.18 - p * .18).toFixed(3);
+    });
+    ticking = false;
+  };
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, {passive:true});
+  addEventListener("resize", frame); frame();
+
+})();
+</script>
+
+<script>
+/* ===== SCROLL-UP MOTION ===== */
+(() => {
+  if (!("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    const n = en.target;
+    if (en.isIntersecting) n.classList.add("tm-in");
+    else { n.classList.remove("tm-in"); n.dataset.tmFrom = en.boundingClientRect.top < 0 ? "top" : "bottom"; }
+  }), {rootMargin:"0px 0px -4% 0px", threshold:0});
+  document.querySelectorAll(".ms-media, .steps .step").forEach(el => {
+    if (el.closest("[hidden]")) return;
+    el.classList.add("tm-pop"); io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

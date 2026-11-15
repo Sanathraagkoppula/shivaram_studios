@@ -416,6 +416,19 @@ h2.tm-words{will-change:translate}
 .tm-pop{transition:opacity 1.1s ease,filter 1.1s ease,transform 1.1s cubic-bezier(.16,.9,.1,1)}
 .tm-on .tm-pop:not(.tm-in){opacity:0;filter:blur(10px);transform:translateY(60px) scale(.92)}
 .tm-on .tm-pop[data-tm-from=top]:not(.tm-in){transform:translateY(-60px) scale(.92)}
+/* Prevent huge empty hero on tall/narrow viewports (e.g. phone "desktop site" mode) */
+.jhero{
+  min-height: min(100svh, 920px);
+}
+
+/* Portrait screens using the desktop layout: let content set the height */
+@media (min-width:901px) and (max-aspect-ratio: 4/5){
+  .jhero{
+    min-height: auto;
+    padding-top: calc(72px + 120px);
+  }
+  .big-year{ top: 110px; }
+}
 </style>
 </head>
 <body>

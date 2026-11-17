@@ -897,13 +897,17 @@ const RAW_PHOTOS = [
   //birthday_imgs
   {src:"images/birthday/01.jpeg",    cat:["Birthday"], title:"Daddy's Little World, Wrapped in Love."},
   {src:"images/birthday/02.jpeg",    cat:"Birthday",         title:"Her First Love, Her Forever Home."},
-  {src:"images/birthday/04.jpeg",    cat:"Birthday",         title:"A Mother's Love Makes Every Moment Magical."},
-  {src:"images/birthday/05.jpg",    cat:"Birthday",         title:"One Year of Pure Magic."},
-  {src:"images/birthday/06.jpeg",    cat:"Birthday",         title:"Surrounded by Love, Blessed With Happiness."},
-  {src:"images/birthday/07.jpg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
-
- 
-
+  {src:"images/birthday/03.jpeg",    cat:"Birthday",         title:"A Mother's Love Makes Every Moment Magical."},
+  {src:"images/birthday/04.jpg",    cat:"Birthday",         title:"One Year of Pure Magic."},
+  {src:"images/birthday/05.jpeg",    cat:"Birthday",         title:"Surrounded by Love, Blessed With Happiness."},
+  {src:"images/birthday/06.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/07.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/08.jpg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/09.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/10.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/11.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/12.jpeg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
+  {src:"images/birthday/13.jpg",    cat:"Birthday",         title:"365 Days, A Million Beautiful Memories."},
   //events_imgs
   {src:"images/events/01.jpeg",      cat:["Events","All"],   title:"Where Passion Finds Its Voice."},
   {src:"images/events/02.jpeg",      cat:["Events","Portrait"],           title:"Lost in the Music, Found in the Moment."},
@@ -919,8 +923,6 @@ const RAW_PHOTOS = [
   {src:"images/wedding/19.jpeg",      cat:["Marriage","Portrait","All"],         title:"A Smile Filled With a Thousand Dreams."},
   {src:"images/wedding/22.jpeg",      cat:["Marriage","Portrait","All"],         title:"Elegance in Every Emotion."},
   {src:"images/wedding/24.jpg",      cat:["Marriage","Portrait","All"],         title:"She Dreamed in White, He Promised Forever."},
-  {src:"images/birthday/03.jpeg",    cat:["Birthday","Portrait"], title:"Little Steps, Big Dreams."},
-  {src:"images/birthday/08.jpeg",    cat:["Birthday","Portrait"],         title:"The Sweetest Chapter of Our Lives."},
 ];
 const catsOf = p => (Array.isArray(p.cat) ? p.cat : [p.cat]).filter(Boolean);
 const PHOTOS = RAW_PHOTOS.filter(p => p.src).map((p, i) => ({
@@ -1474,7 +1476,7 @@ document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click"
 }));
 
 /* ─── ENQUIRY FORM ─────────────────────────────────────────── */
-const ENQUIRY_TO = "sanathraagkoppula@gmail.com";   // ← enquiries are delivered to this inbox
+const ENQUIRY_TO = "";   // ← enquiries are delivered to this inbox
 
 $("#form").addEventListener("submit", async e => {
   e.preventDefault();

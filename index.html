@@ -167,6 +167,17 @@ section{padding-block:clamp(80px,12vw,150px)}
 .shot figcaption h3{font-size:14px;-webkit-line-clamp:1;line-clamp:1}
 }
 
+/* MOBILE: gallery photos two side by side */
+@media (max-width:640px){
+  .grid{columns:2;column-gap:10px}
+  .shot{margin:0 0 10px}
+  .shot img{min-height:0}
+  .shot figcaption{padding:28px 8px 7px;gap:6px}
+  .shot figcaption h3{font-size:12px}
+  .shot figcaption small{font-size:8.5px;letter-spacing:.1em;margin-top:3px}
+  .shot .no{font-size:9.5px}
+}
+
 /* SERVICES (callout figure) */
 /* SERVICES: services on both sides, person in the centre */
 .svc{--blue:var(--amber);--blue-2:#F0B877;background:var(--ink-2);border-block:1px solid var(--line);color:var(--paper);overflow:hidden;padding-block:clamp(56px,7vw,96px)}
